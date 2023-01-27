@@ -1,0 +1,267 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none!important;
+    font-family: 'Inconsolata', monospace;
+        font-family: 'Roboto', sans-serif;
+}
+
+body{
+    margin-left: 80px !important;
+    margin-top: 80px !important;
+    transition: margin-left 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    /*background-image: url(../Media/Images/c405929751813c1595fb8b80d1788b0e.jpg);*/
+    background-image: url(../Media/Images/photo_2023-01-23_21-29-47.jpg);
+    background-repeat: no-repeat;
+    /*background-size: 100%;*/
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+main {
+    padding: 3%;
+    color: white;
+}
+
+
+/*Menú Lateral Responsivo*/
+header{
+    width: 100%;
+    height: 80px;
+    background-color: #f5f5f5;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 200;
+}
+
+.titulo_menu {
+    font-size: 18px!important;
+    
+}
+
+.icon_menu{
+    width: 50px;
+    height: 100%;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    transform: translateX(30px);
+}
+
+.icon_menu i{
+    font-size: 20px;
+    cursor: pointer;
+    position: absolute;
+}
+
+.menu_slide{
+    width: 80px;
+    height: 100%;
+    background-color: #4C2882;
+    position: fixed;
+    top: 0;
+    left: 0;
+    color: white;
+    font-size: 16px;
+    z-index: 300;
+    overflow: hidden;
+    overflow-y: scroll;
+    border-right: 20px solid #4C2882;
+    transition: all 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+/*Ocultar scroll para Chrome, Safari y Opera*/
+.menu_slide::-webkit-scrollbar {
+    display: none;
+}
+
+/*Ocultar scroll para IE, Edge y Firefox*/
+.menu_slide{
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.f_l_m{
+    padding: 20px 30px;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.icon-menu-titulo {
+    width: 30px;
+    margin-right: 20px;
+    margin-bottom: 5px;
+}
+
+.menu_opciones {
+    padding: 20px 30px;
+    position: absolute;
+    top: 80px;
+    margin-top: 20px;
+}
+
+.menu_opciones a{
+    color: rgb(180, 179, 179);
+    cursor: default;
+    display: block;
+    position: relative;
+    transition: color 300ms;
+}
+
+.menu_opciones a:hover{
+    color: white;
+}
+
+.menu_opciones .opciones{
+    padding: 20px 0px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.menu_opciones .opciones i{
+    width: 30px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.menu_opciones .opciones .titulo_menu{
+    cursor: pointer;
+    font-weight: 200;
+}
+
+/*para marcar la sección actual*/
+a.paginaActual{
+    color: white;
+}
+
+.paginaActual:before{
+    content: '';
+    width: 3px;
+    height: 80%;
+    background-color: white;
+    position: absolute;
+    top: 10%;
+    left: -30px;
+}
+/*para ver si se pueden aplicar con JS*/
+
+/*Clases para usar en JS*/
+.body_slide{
+    margin-left: 250px !important;
+}
+
+.menu_slide_movil{
+    width: 250px;
+}
+
+@media screen and (max-width: 760px) {
+    .body_slide{
+        margin-left: 0px !important;
+    }
+
+    .menu_slide_movil{
+        width: 80px;
+        left: -80px;
+    }
+    .icon_menu{
+        transform: translateX(10px);
+    }
+}
+
+/*---------------------------------------------*/
+
+/* CSS para Index*/
+.retrato{
+    align-content: center;
+    margin-top: auto;
+}
+
+#foto_carnet{
+    width: 25%;
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+}
+
+.Nombre{
+   margin-left: auto;
+   margin-right: auto;
+   display: block;
+   text-align: center;
+   
+}
+
+.Nombre h1 span{
+    background-color:  rgb(39, 90, 73);
+    border: solid rgb(70, 165, 133);
+}
+
+.parrafoIndex{
+    background-color: rgb(27, 13, 47,.6);
+}
+/*-------------------------------------------------*/
+
+/* CSS para Información Peronal y ajustes de estilo generales */
+
+.tituloSeccion{
+    background-color: rgb(39, 90, 73);
+    margin-right: auto;
+    text-align: center;
+}
+.containerDatos {
+    background-color: rgb(76, 40, 130, .5);
+    margin-right: auto;
+}
+
+.datos ul li{
+    list-style: none;
+}
+
+.containerDatos ul li .itemDatos{
+    color: rgb(70, 165, 133);
+    font-weight: bolder;
+    text-decoration: underline !important;
+}
+
+.itemDatos i{
+    text-decoration: none;
+    margin-right: 3px !important;
+}
+/*--------------------------------------------------------*/
+
+.imagenWIP {
+    margin-left: auto;
+   margin-right: auto;
+   display: block;
+   text-align: center;
+}
+
+#WIP {
+    width: 100%;
+    display: flex;
+}
+
+#return_index {
+    color: red;
+    font-size: 200%;
+}
+
+#textoAdvertencia {
+    font-size: 125%;
+    text-align: center;
+}
+
+.botonAdvertencia {
+    margin-right: 25%;
+    margin-left: 25%;
+    text-align: center;
+    background-color: rgb(76, 40, 130);
+    display: block;
+}
